@@ -4,8 +4,8 @@ const spazNow = require('../now')
 const { now: dateNow } = Date
 
 Bench()
-	.test(dateNow)
-	.test(spazNow)
+	.test('Date.now', dateNow)
+	.test('@spazmodius/now', spazNow)
 	.run()
 	.then(Bench.summarize)
 	.then(console.log)
