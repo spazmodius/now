@@ -8,7 +8,9 @@ let time, baseline
 function sync() {
 	time = dateNow()
 	baseline = hrtime()
-	
+
+	// subtract a half-ms
+	// later, Math.floor will have the effect of rounding
 	baseline[1] -= 5e5
 	if (baseline[1] < 0) {
 		baseline[0] -= 1
@@ -17,6 +19,8 @@ function sync() {
 }
 
 function now() {
+	// why not hrtime(baseline)?
+	// long subtraction for the love of nanos!
 	let [s, ns] = hrtime()
 	s -= baseline[0]
 	ns -= baseline[1]
@@ -27,7 +31,8 @@ function now() {
 	return time + s * 1e3 + floor(ns * 1e-6)
 }
 
-sync()
+// re-sync periodically because the system clock drifts and adjusts
 setInterval(sync, 10000).unref()
+sync()
 
 module.exports =  now

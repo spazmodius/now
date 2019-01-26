@@ -1,6 +1,6 @@
 {
   "name": "@spazmodius/now",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Faster now() for Node.js",
   "repository": "github:spazmodius/now",
   "main": "now.js",
