@@ -5,7 +5,7 @@
 Let's be clear: `Date.now()` is not "slow".
 On my laptop (c. 2019) it returns the current time in about 80 nanoseconds (yes, _nano_; 80 billionths-with-a-B of a second.)
 
-But if you like speed like Spaz likes speed, it turns out that using Node's `process.hrtime()` we can calculate the current time in about _half the nanos!_
+But, if you like speed like Spaz likes speed, it turns out that using Node's [`process.hrtime()`](https://nodejs.org/api/process.html#process_process_hrtime_time) we can calculate the current time in about _half the nanos!_
 
 ## Installation and Usage
 
@@ -21,7 +21,7 @@ console.log('The current time is', now(), Date.now())
 ### now()
 
 Returns the number of milliseconds since the UNIX epoch.
-This is a drop-in replacement for `Date.now()`.
+This is a drop-in replacement for [`Date.now()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now).
 
 ## Tests
 
