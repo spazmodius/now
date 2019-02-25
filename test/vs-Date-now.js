@@ -1,6 +1,6 @@
 'use strict'
 const Bench = require('@spazmodius/hrbench')
-const spazNow = require('../now')
+const spazNow = require('..')
 const { now: dateNow } = Date
 
 Bench()

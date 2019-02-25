@@ -1,7 +1,8 @@
 'use strict'
-const test = require('ava')
-const now = require('../now')
+const given = require('@spazmodius/gwt')
+const now = require('..')
 
-test('matches Date.now', t => {
-	t.true(Math.abs(now() - Date.now()) <= 1)
-})
+given(()=> Date.now())
+.given(() => now())
+.when((dateNow, spazNow) => Math.abs(spazNow - dateNow))
+.then(({returned: difference}) => difference <= 1)

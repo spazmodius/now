@@ -7,12 +7,8 @@
   "scripts": {
     "test": "ava"
   },
-  "ava": {
-    "babel": false,
-    "compileEnhancements": false
-  },
   "devDependencies": {
-    "@spazmodius/hrbench": "github:spazmodius/hrbench",
-    "ava": "^1.1.0"
+    "@spazmodius/gwt": "github:spazmodius/gwt",
+    "@spazmodius/hrbench": "github:spazmodius/hrbench"
   }
 }
