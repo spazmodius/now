@@ -5,7 +5,8 @@
   "repository": "github:spazmodius/now",
   "main": "now.js",
   "scripts": {
-    "test": "ava"
+    "test": "node test/test.js",
+    "bench": "node test/vs-Date-now.js"
   },
   "devDependencies": {
     "@spazmodius/gwt": "github:spazmodius/gwt",

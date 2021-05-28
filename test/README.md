@@ -2,11 +2,11 @@ Installing with `npm` does not include the tests; you'll have to clone the repo.
 
 # Unit Tests
 
-`ava test.js`
+`npm test`
 
 # Benchmarks
 
-`node vs-Date-now.js`
+`npm run bench`
 
 ```
 Benchmark Complete
